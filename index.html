@@ -19,9 +19,9 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(226, 67, 41, 0.1);
         }
-        /* 首屏背景图 */
+        /* 首屏背景图：只保留干净的背景大图，去除暗色遮罩 */
         .hero-banner {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url('演示文稿4_01(2).jpg');
+            background-image: url('演示文稿4_01(2).jpg');
             background-size: cover;
             background-position: center;
         }
@@ -39,7 +39,7 @@
     <div class="max-w-7xl mx-auto px-4 pt-6">
         <header class="flex justify-between items-center pb-4 border-b border-slate-200">
             <div class="flex items-center gap-3">
-                <!-- 官方单 Logo 规范引用 -->
+                <!-- 顶部左上角 Logo：替换下方 src="你的新Logo网络链接" -->
                 <img src="1-单Logo-极狐GitLab_1_2025_New.png" alt="极狐GitLab Logo" class="h-10 object-contain">
             </div>
             <div class="flex gap-2">
@@ -75,19 +75,8 @@
                     <div class="bg-[#f8fafc] p-3 sm:p-6">
                         <div class="max-w-[620px] mx-auto bg-white rounded-xl shadow-md overflow-hidden border border-slate-100">
                             
-                            <!-- Hero Banner Section -->
-                            <div class="hero-banner p-8 text-center text-white relative min-h-[220px] flex flex-col justify-between">
-                                <div class="absolute top-4 left-4 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
-                                    <img src="1-单Logo-极狐GitLab_1_2025_New.png" alt="极狐GitLab Logo" class="h-6 brightness-0 invert object-contain">
-                                </div>
-                                <div class="mt-8">
-                                    <h2 class="text-3xl font-extrabold tracking-tight leading-tight text-[#fc6d26]">
-                                        极狐GitLab Duo 上新体验
-                                    </h2>
-                                    <p class="text-lg font-bold text-white mt-1">
-                                        不仅是软件研发全生命周期的 AI 编排平台，更是释放研发团队创造力的助手
-                                    </p>
-                                </div>
+                            <!-- Hero Banner Section：仅保留响应式比例背景图，删除所有内部元素 -->
+                            <div class="hero-banner w-full aspect-[2.2/1]">
                             </div>
 
                             <!-- Intro Pitch -->
